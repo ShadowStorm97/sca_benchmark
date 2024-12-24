@@ -90,7 +90,7 @@ public class ParamController extends BaseApiController {
                 }
             }
         }
-        ParamUtil.getInParamOfFile(npmUpdateInfoRequest.getPackage(), npmUpdateInfoRequest.getVersion()).va;
+        ParamUtil.getInParamOfFiles(npmUpdateInfoRequest.getPackage(), npmUpdateInfoRequest.getVersion());
         // 返回结果
         baseOperationResult.setSuccess(true);
         baseOperationResult.setMessage("NPM update successful");
