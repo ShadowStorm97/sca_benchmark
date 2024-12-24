@@ -73,7 +73,7 @@ public class ParamController extends BaseApiController {
                 if (StringUtil.isNotBlank(result)) {
                     LoggerUtil.infoPrint(logger,
                             "NPM写入缓存，其组件名为 " + npmUpdateInfoRequest.getPackageName());
-                    JSONObject packageJson = JSON.parseObject(result, Feature.OrderedField);
+                    JSONObject packageJson = new JSONObject();
                     //性能考虑 转成简版npmDependencyDefine
                     NPMVersionHistory npmVersionHistory = MainStationNPMRegistryUtil.toNpmVersionHistory(
                             packageJson);
